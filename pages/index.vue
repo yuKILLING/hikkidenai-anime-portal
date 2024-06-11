@@ -1,5 +1,5 @@
 <template>
-  <div class="w-3/5 m-auto">
+  <div class="w-4/5 1000:w-3/5 m-auto">
     <!-- CAROUSEL -->
     <div class="rounded-xl bg-[#1c1c1c] pt-2">
       <span class="pl-3 text-lg text-[#a2a2a7]">Популярные онгоинги</span>
@@ -15,7 +15,7 @@
     <!-- ANIME LIST -->
     <div v-if="!pending" class="mt-10 flex flex-col items-center">
       <div>
-        <div class="flex justify-between">
+        <div class="flex 500:flex-row flex-col justify-between">
           <h1 class="text-3xl font-bold">Популярные аниме</h1>
           <div>
             <select

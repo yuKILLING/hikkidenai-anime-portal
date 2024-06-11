@@ -1,6 +1,6 @@
 <template>
   <div class="bg-[#09090B] text-[#bfbfbf] p-3">
-    <div class="w-3/5 m-auto flex flex-col">
+    <div class="w-4/5 1400:w-3/5 m-auto flex flex-col">
       <span
         >Сайт предназначен для людей без личной жизни, утопающих в
         прокрастинации.</span

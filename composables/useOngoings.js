@@ -15,7 +15,6 @@ export default function useOngoings() {
         },
       });
       ongoings.value = response;
-      console.log(ongoings.value);
     } catch (error) {
       console.error("Ошибка при загрузке данных:", error);
     }

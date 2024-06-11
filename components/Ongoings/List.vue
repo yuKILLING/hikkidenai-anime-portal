@@ -10,7 +10,7 @@
         <CarouselItem
           v-for="ongoing in ongoings"
           :key="ongoing.id"
-          class="pl-5 md:basis-1/6 lg:basis-1/12"
+          class="pl-5 basis-[30%] 500:basis-[30%] md:basis-[20%] 1000:basis-[15%] 1500:basis-[10%] 1800:basis-1/12"
         >
           <OngoingsItem :ongoing="ongoing" />
         </CarouselItem>

@@ -1,9 +1,9 @@
 <template>
   <!-- <div class="bg-[#252527] grid grid-cols-3 text-[#bfbfbf]"> -->
   <div
-    class="bg-[#09090B] grid grid-cols-3 text-[#bfbfbf] border-b-[1px] border-[#151518]"
+    class="bg-[#09090B] grid grid-cols-3 h-20 text-[#bfbfbf] border-b-[1px] border-[#151518]"
   >
-    <div class="justify-self-center">
+    <div class="flex justify-center items-center">
       <a href="/"><NuxtImg src="/pngs/logo.png" sizes="200px" /></a>
     </div>
     <div class="flex justify-center items-center gap-5">

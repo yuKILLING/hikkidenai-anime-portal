@@ -24,7 +24,7 @@
           <img
             :src="apiBase + anime.image.original"
             alt="Poster"
-            class="w-[200px] h-[300px] rounded"
+            class="w-[200px] h-[270px] rounded"
           />
 
           <div class="mt-2">

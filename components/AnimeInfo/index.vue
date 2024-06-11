@@ -1,20 +1,20 @@
 <template>
-  <section class="flex">
+  <section class="flex flex-col 1400:flex-row items-center 1400:items-start">
     <!-- ASIDE BAR -->
-    <aside class="w-64 p-4">
+    <aside class="1400:w-64 p-4 flex 1400:flex-col flex-col sm:flex-row gap-10 1400:gap-0 items-center">
       <Dialog>
         <DialogTrigger>
           <div class="flex flex-wrap gap-3">
             <img
               :src="apiBase + info.image.original"
               alt="Anime Image"
-              class="rounded-lg"
+              class="rounded-lg w-[220px] h-[340px]"
               @click="modalScreenShotMiddleware(info.image.original)"
               v-if="info"
             /></div
         ></DialogTrigger>
         <DialogContent
-          class="flex justify-center items-center bg-zinc-950 text-white"
+          class="flex justify-center items-center bg-zinc-950 text-white p-0"
         >
           <img :src="selectedImage" alt="Image" />
         </DialogContent>
@@ -100,7 +100,7 @@
                 /></div
             ></DialogTrigger>
             <DialogContent
-              class="flex justify-center items-center bg-zinc-950 text-white"
+              class="flex justify-center items-center bg-zinc-950 text-white p-0"
             >
               <img :src="selectedImage" alt="Image" />
             </DialogContent>
@@ -121,7 +121,7 @@
                 /></div
             ></DialogTrigger>
             <DialogContent
-              class="flex justify-center items-center bg-zinc-950 text-white"
+              class="flex justify-center items-center bg-zinc-950 text-white p-0"
             >
               <img :src="selectedImage" alt="Image" />
             </DialogContent>
