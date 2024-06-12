@@ -19,7 +19,7 @@
           <h1 class="text-3xl font-bold">Популярные аниме</h1>
           <div>
             <select
-              class="bg-transparent outline-none w-44 h-12 px-2 border-[1px] border-[#27272A] rounded transition duration-500"
+              class="bg-transparent outline-none w-44 h-12 px-2 border-[1px] border-[#27272A] rounded"
               v-model="sortBy"
             >
               <option value="popularity" class="bg-[#09090B]">
@@ -38,11 +38,11 @@
     <div v-if="pending">
       <div class="mt-10 flex flex-col items-center">
         <div>
-          <div class="flex justify-between">
+          <div class="flex 500:flex-row flex-col justify-between">
             <h1 class="text-3xl font-bold">Популярные аниме</h1>
             <div>
               <select
-                class="bg-transparent outline-none w-44 h-12 px-2 border-[1px] border-[#27272A] rounded transition duration-500"
+                class="bg-transparent outline-none w-44 h-12 px-2 border-[1px] border-[#27272A] rounded"
                 v-model="sortBy"
               >
                 <option value="popularity" class="bg-[#09090B]">

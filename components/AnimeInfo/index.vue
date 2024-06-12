@@ -1,7 +1,9 @@
 <template>
   <section class="flex flex-col 1400:flex-row items-center 1400:items-start">
     <!-- ASIDE BAR -->
-    <aside class="1400:w-64 p-4 flex 1400:flex-col flex-col sm:flex-row gap-10 1400:gap-0 items-center">
+    <aside
+      class="1400:w-64 p-4 flex 1400:flex-col flex-col sm:flex-row gap-10 1400:gap-0 items-center"
+    >
       <Dialog>
         <DialogTrigger>
           <div class="flex flex-wrap gap-3">
@@ -153,54 +155,13 @@ const isOpen = ref(false);
 const selectedImage = ref(null);
 
 function airedOn(dateString) {
-  const newString = dateString.split("-");
-  const year = newString[0];
-  const month = parseInt(newString[1]);
-  const day = newString[2];
-
-  let monthName;
-  switch (month) {
-    case 1:
-      monthName = "января";
-      break;
-    case 2:
-      monthName = "февраля";
-      break;
-    case 3:
-      monthName = "марта";
-      break;
-    case 4:
-      monthName = "апреля";
-      break;
-    case 5:
-      monthName = "мая";
-      break;
-    case 6:
-      monthName = "июня";
-      break;
-    case 7:
-      monthName = "июля";
-      break;
-    case 8:
-      monthName = "августа";
-      break;
-    case 9:
-      monthName = "сентября";
-      break;
-    case 10:
-      monthName = "октября";
-      break;
-    case 11:
-      monthName = "ноября";
-      break;
-    case 12:
-      monthName = "декабря";
-      break;
-    default:
-      monthName = "неизвестного месяца";
-  }
-
-  return `${day} ${monthName} ${year}`;
+  if (!dateString) return 'Нет даты выхода';
+  const date = new Date(dateString);
+  const monthNames = [
+    'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+    'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
+  ];
+  return `${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()}`;
 }
 
 function animeEpisodes(anime) {

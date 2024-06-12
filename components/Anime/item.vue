@@ -18,13 +18,13 @@
     <Tooltip>
       <TooltipTrigger class="flex"
         ><div
-          class="flex flex-col w-[200px] overflow-hidden break-words relative"
+          class="flex flex-col w-[200px] h-[350px] overflow-hidden break-words relative p-1"
           @click="navigateTo(`/animes/${anime.id}`)"
         >
           <img
             :src="apiBase + anime.image.original"
             alt="Poster"
-            class="w-[200px] h-[270px] rounded"
+            class="w-[190px] h-[260px] rounded"
           />
 
           <div class="mt-2">

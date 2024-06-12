@@ -29,6 +29,7 @@ export default defineNuxtConfig({
             '1500': '1500px',
             '1400': '1400px',
             '1000': '1000px',
+            '800': '800px',
             '500': '500px'
           }
         },
