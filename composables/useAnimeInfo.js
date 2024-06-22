@@ -13,7 +13,6 @@ export default function useAnimeInfo() {
           method: "GET",
         }
       );
-      console.log(info.value)
 
     } catch (error) {
       console.error("Error loading anime info:", error);

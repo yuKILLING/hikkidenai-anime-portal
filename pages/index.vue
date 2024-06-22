@@ -12,6 +12,7 @@
       <SkeletonCarousel v-else> </SkeletonCarousel>
     </div>
 
+
     <!-- ANIME LIST -->
     <div v-if="!pending" class="mt-10 flex flex-col items-center">
       <div>
@@ -69,7 +70,6 @@
       >
         <PaginationList v-slot="{ items }" class="flex items-center gap-1">
           <PaginationFirst class="bg-[#27272A]" />
-          <PaginationPrev class="bg-[#27272A]" />
 
           <template v-for="(item, index) in items">
             <PaginationListItem
@@ -90,7 +90,6 @@
             <PaginationEllipsis v-else :key="item.type" :index="index" />
           </template>
 
-          <PaginationNext class="bg-[#27272A]" />
           <PaginationLast class="bg-[#27272A]" />
         </PaginationList>
       </Pagination>

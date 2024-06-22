@@ -15,10 +15,47 @@
         <span>Каталог</span>
         <Icon name="material-symbols:keyboard-arrow-down" size="20px" />
       </div>
-      <div class="transisiton_blocks">
-        <Icon name="material-symbols:search" size="20px" />
-        <span>Поиск</span>
-      </div>
+      <!-- SEACH DIALOG -->
+      <Dialog>
+        <DialogTrigger as-child>
+          <div class="transisiton_blocks">
+            <Icon name="material-symbols:search" size="20px" />
+            <span>Поиск</span>
+          </div>
+        </DialogTrigger>
+        <DialogContent
+          class="bg-transparent border-none text-white absolute top-10"
+        >
+          <!-- SHADCN SHIT -->
+          <div class="hidden">
+            <DialogTitle>Search</DialogTitle>
+            <DialogDescription> Search </DialogDescription>
+          </div>
+          <!-- MAIN SEARCH DIV -->
+          <div class="relative w-full max-w-sm flex flex-col">
+            <!-- INPUT -->
+            <div>
+              <Input
+                id="search"
+                type="text"
+                placeholder="Search..."
+                class="pl-8 bg-zinc-950 placeholder:text-white"
+                maxlength="60"
+                @input="onChangeSearchInput"
+              />
+              <span
+                class="absolute start-0 inset-y-0 flex items-center justify-center px-2"
+              >
+                <!-- <Icon name="material-symbols:search" size="23px" /> -->
+              </span>
+            </div>
+
+            <div class="bg-[#09090B] absolute top-14 rounded">
+              <SearchedAnimeList :searchQuery="searchQuery"/>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
 
     <!-- PROFILE -->
@@ -35,7 +72,9 @@
       </Icon>
 
       <!-- HAMBURGER DIV -->
-      <div class="absolute top-[78px] bg-[#252527] hamburger hidden z-10 text-xl py-2 px-1 rounded">
+      <div
+        class="absolute top-[78px] bg-[#252527] hamburger hidden z-10 text-xl py-2 px-1 rounded"
+      >
         <div class="transisiton_blocks">
           <Icon name="material-symbols:layers" size="17px" />
           <span>Каталог</span>
@@ -65,3 +104,12 @@
   display: block;
 }
 </style>
+
+<script setup>
+import debounce from 'lodash.debounce'
+const { searchQuery } = useSearch();
+
+const onChangeSearchInput = debounce((event) => {
+  searchQuery.value = event.target.value;
+}, 300);
+</script>
